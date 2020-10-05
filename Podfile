@@ -8,7 +8,7 @@ target 'AlphaWallet' do
   pod 'R.swift'
   pod 'JSONRPCKit', '~> 2.0.0'
   pod 'APIKit'
-  pod 'Eureka', '~> 5.2.1'
+  pod 'Eureka', :git => 'https://github.com/vladyslav-iosdev/Eureka.git', :branch => 'xcode12'
   pod 'MBProgressHUD'
   pod 'StatefulViewController'
 
@@ -32,7 +32,7 @@ target 'AlphaWallet' do
   pod 'PromiseKit/Alamofire'
   #To force SWXMLHash which Macaw depends on to be Swift >= 4
   pod 'SWXMLHash', '~> 5.0.0'
-  pod "Macaw", :git => 'https://github.com/alpha-wallet/Macaw.git', :commit => 'e1f4eb1d2b81676fb10e9835c5e2ce9e9f51faf9'
+  pod "Macaw", :git => 'https://github.com/vladyslav-iosdev/Macaw.git', :commit => 'bf608a0abfab1fafe68c82bc0c0ab93377da5e53'
   pod "Kanna", :git => 'https://github.com/tid-kijyun/Kanna.git', :commit => '06a04bc28783ccbb40efba355dee845a024033e8'
   pod 'TrustWalletCore'
   pod 'AWSSNS'
@@ -53,6 +53,7 @@ end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
+
     if ['TrustKeystore'].include? target.name
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
@@ -66,6 +67,17 @@ post_install do |installer|
     ].include? target.name
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+    
+    target.build_configurations.each do |config|
+      if ['Kingfisher'].include? target.name
+        
+      else
+        #xCode 12 requires minimum IPHONEOS_DEPLOYMENT_TARGET 9.0
+        if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] <= '8.0'
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0';
+        end
       end
     end
   end

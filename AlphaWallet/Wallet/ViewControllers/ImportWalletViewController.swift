@@ -506,7 +506,7 @@ class ImportWalletViewController: UIViewController, CanScanQRCode {
         switch UIDevice.current.userInterfaceIdiom {
         case .pad:
             controller.modalPresentationStyle = .formSheet
-        case .unspecified, .tv, .carPlay, .phone:
+        case .unspecified, .tv, .carPlay, .phone, .mac:
             controller.makePresentationFullScreenForiOS13Migration()
         }
         present(controller, animated: true, completion: nil)

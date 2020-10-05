@@ -92,14 +92,14 @@ DEPENDENCIES:
   - AWSSNS
   - BigInt (~> 3.0)
   - CryptoSwift
-  - Eureka (~> 5.2.1)
+  - Eureka (from `https://github.com/vladyslav-iosdev/Eureka.git`, branch `xcode12`)
   - iOSSnapshotTestCase
   - JavaScriptKit
   - JSONRPCKit (~> 2.0.0)
   - Kanna (from `https://github.com/tid-kijyun/Kanna.git`, commit `06a04bc28783ccbb40efba355dee845a024033e8`)
   - KeychainSwift (from `https://github.com/AlphaWallet/keychain-swift.git`, branch `alphawallet`)
   - Kingfisher
-  - Macaw (from `https://github.com/alpha-wallet/Macaw.git`, commit `e1f4eb1d2b81676fb10e9835c5e2ce9e9f51faf9`)
+  - Macaw (from `https://github.com/vladyslav-iosdev/Macaw.git`, commit `bf608a0abfab1fafe68c82bc0c0ab93377da5e53`)
   - MBProgressHUD
   - Mixpanel-swift
   - Moya (~> 10.0.1)
@@ -150,7 +150,6 @@ SPEC REPOS:
     - TrustWalletCore
   trunk:
     - Alamofire-Synchronous
-    - Eureka
     - libsodium
     - Mixpanel-swift
     - Realm
@@ -160,6 +159,9 @@ EXTERNAL SOURCES:
   AlphaWalletWeb3Provider:
     :commit: 1c1aafb566361e7067e69f6e38b0fdc30b801429
     :git: https://github.com/AlphaWallet/AlphaWallet-web3-provider
+  Eureka:
+    :branch: xcode12
+    :git: https://github.com/vladyslav-iosdev/Eureka.git
   Kanna:
     :commit: 06a04bc28783ccbb40efba355dee845a024033e8
     :git: https://github.com/tid-kijyun/Kanna.git
@@ -167,8 +169,8 @@ EXTERNAL SOURCES:
     :branch: alphawallet
     :git: https://github.com/AlphaWallet/keychain-swift.git
   Macaw:
-    :commit: e1f4eb1d2b81676fb10e9835c5e2ce9e9f51faf9
-    :git: https://github.com/alpha-wallet/Macaw.git
+    :commit: bf608a0abfab1fafe68c82bc0c0ab93377da5e53
+    :git: https://github.com/vladyslav-iosdev/Macaw.git
   QRCodeReaderViewController:
     :commit: 30d1a2a7d167d0d207ae0ae3a4d81bcf473d7a65
     :git: https://github.com/AlphaWallet/QRCodeReaderViewController.git
@@ -188,6 +190,9 @@ CHECKOUT OPTIONS:
   AlphaWalletWeb3Provider:
     :commit: 1c1aafb566361e7067e69f6e38b0fdc30b801429
     :git: https://github.com/AlphaWallet/AlphaWallet-web3-provider
+  Eureka:
+    :commit: 5c54e2607632ce586010e50e91d9adcb6bb3909e
+    :git: https://github.com/vladyslav-iosdev/Eureka.git
   Kanna:
     :commit: 06a04bc28783ccbb40efba355dee845a024033e8
     :git: https://github.com/tid-kijyun/Kanna.git
@@ -195,8 +200,8 @@ CHECKOUT OPTIONS:
     :commit: b797d40a9d08ec509db4335140cf2259b226e6a2
     :git: https://github.com/AlphaWallet/keychain-swift.git
   Macaw:
-    :commit: e1f4eb1d2b81676fb10e9835c5e2ce9e9f51faf9
-    :git: https://github.com/alpha-wallet/Macaw.git
+    :commit: bf608a0abfab1fafe68c82bc0c0ab93377da5e53
+    :git: https://github.com/vladyslav-iosdev/Macaw.git
   QRCodeReaderViewController:
     :commit: 30d1a2a7d167d0d207ae0ae3a4d81bcf473d7a65
     :git: https://github.com/AlphaWallet/QRCodeReaderViewController.git
@@ -256,6 +261,6 @@ SPEC CHECKSUMS:
   TrustWalletCore: dd8c81d5958f1eb737abea1e14675efcc6a104aa
   web3swift: 1597d4997976d21325882db4c523f1dfd5459406
 
-PODFILE CHECKSUM: 0316d0f99f78f33ba3a5a3805c877a60cb4d9975
+PODFILE CHECKSUM: 2eb599e83f16c41e58ff2661c503a880304bf3ac
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
