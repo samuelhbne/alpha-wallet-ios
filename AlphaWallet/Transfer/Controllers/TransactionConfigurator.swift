@@ -150,7 +150,7 @@ class TransactionConfigurator {
     }
 
 // swiftlint:disable function_body_length
-    func load(completion: @escaping (ResultResult<Void, AnyError>.t) -> Void) {
+    func start(completion: @escaping (ResultResult<Void, AnyError>.t) -> Void) {
         estimateGasPrice()
         if isGasLimitSpecifiedByTransaction {
             estimateGasLimit()
